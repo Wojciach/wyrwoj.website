@@ -1,15 +1,28 @@
 
-@font-face {
-    font-family: lato;
-    src: url(lato-regular.ttf);
-    
-  } 
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway&family=Roboto:ital@1&family=Space+Grotesk&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+//colors: 
+
+$violet-1: rgb(161, 168, 255);
+$violet-2: rgb(117, 123, 253);
+$violet-3: rgb(35, 0, 142);
+
+$red: rgb(255, 100, 100);
+
+$grey-1: rgb(242, 242, 242);
+$grey-2: rgb(153, 153, 153);
+$grey-3: rgb(77, 77, 77);
+$grey-4: rgb(51, 51, 51);
 
 
 * {
-    font-family : Arial, Helvetica, sans-serif;
+    font-family : Lato, Helvetica, sans-serif;
 }
 
 h1 {
@@ -18,42 +31,42 @@ h1 {
 }
 
 #name {
-   background-color: #A1A8FF;
-   color: #F2F2F2;
+   background-color: $violet-2;
+   background-image: linear-gradient(rgba($grey-1, 0.5), $violet-2 50%);
+   color: $grey-1;
    text-align: center;
    
 }
 
 .skill_slider {
+    position: relative;
     margin: 5px;
     display: flex;
     align-items: center;
-  //  height: 40px;
-    font-family: lato;
-    border: 1px solid rgb(153, 153, 153);
+    border: 1px solid $violet-2;
     border-radius: 40px;
+    
     
 }
 
 .skill {
     font-family: 'Roboto', sans-serif;
+    background-color: $red;
+    background-image: linear-gradient(rgba($grey-1, 0.4), $red 50%);
+    color: white;
     text-align: center;
     width: 120px;
     padding: 3px;
     border-radius: inherit;
-    border: 1px solid rgb(153, 153, 153);
+    border: 1px solid white;
+    z-index: 1;
 }
 
-.animate_skill {
-    animation: animation1 1s ease-out 0s 1 normal forwards;
-}
-
-@keyframes animation1 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(300px);
-  }
-  
+.progressBar {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background-color: aqua;
+  z-index: 0;
+  border-radius: inherit;
 }
