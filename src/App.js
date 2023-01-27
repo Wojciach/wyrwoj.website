@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect, useState} from "react";
+
+import './app-sass.scss';
+
+import Name from './Name';
+import Skill from './Skill';
 
 function App() {
+/*
+const [color, setColor] = useState("");
+
+useEffect( () => {
+
+ function slideSkills() {
+    var skills = document.getElementsByClassName("skill");
+
+    for (const x of skills) {
+      var sN = x.getAttribute("data");
+      console.log(sN);
+      x.classList.add(sN);
+    }
+    console.log(color);
+    setColor("x");
+   
+  }
+
+  document.getElementById("skillSet").addEventListener("mouseenter", slideSkills)
+
+},[])
+
+*/
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Name />
+
+
+      <div id='skillSet'>
+
+        < Skill sName="JavaScript" />
+        < Skill sName="ReactJs" />
+        < Skill sName="HTML" />
+
+      </div>
+    </>
+
   );
+
 }
+
+
 
 export default App;

@@ -1,0 +1,59 @@
+
+@font-face {
+    font-family: lato;
+    src: url(lato-regular.ttf);
+    
+  } 
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+
+* {
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#name {
+   background-color: #A1A8FF;
+   color: #F2F2F2;
+   text-align: center;
+   
+}
+
+.skill_slider {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+  //  height: 40px;
+    font-family: lato;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 40px;
+    
+}
+
+.skill {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    width: 120px;
+    padding: 3px;
+    border-radius: inherit;
+    border: 1px solid rgb(153, 153, 153);
+}
+
+.animate_skill {
+    animation: animation1 1s ease-out 0s 1 normal forwards;
+}
+
+@keyframes animation1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+  
+}
