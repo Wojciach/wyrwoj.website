@@ -1,0 +1,43 @@
+@import "colorsAndFonts";
+
+header {
+    width: 100%;
+    #cv {
+        font-family: "Raleway";
+        color: $violet-2;
+        padding: 30px;
+        span {
+            font-weight: 700;
+        }
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        position: relative;
+        background-color: $violet-2;
+        background-image: linear-gradient(rgba($grey-1, 0.5), $violet-2 50%);
+        color: $grey-1;
+        #nameTitle {
+            font-size: 1.6em;
+            margin: 30px;
+            #name {
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: 700;
+                line-height: 0.8em;
+            }
+            #title {
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 0.7em;
+                line-height: 0.8em;
+            }
+        }
+        #introduction {
+            margin-left: 35%;
+        }
+    }   
+}
+
+
+
+

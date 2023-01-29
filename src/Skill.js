@@ -16,12 +16,12 @@ function Skill(props) {
     function handleResize() {
       
       sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
-      setTr((sliderWidth -126) * (description[props.sName].prog / 100)  );
+      setTr((sliderWidth - 134) * (description[props.sName].prog / 100));
       
     }
 
     document.getElementById("skillSet").addEventListener("mouseenter", () => {
-      setTr((sliderWidth -126) * (description[props.sName].prog / 100)  );
+      setTr((sliderWidth - 134 ) * (description[props.sName].prog / 100));
       document.getElementById(props.sName).classList.add(props.sName);
       document.getElementById(props.sName + "-tail").classList.add(props.sName + "-tail");
     })
@@ -45,7 +45,7 @@ function Skill(props) {
               }
             }
             
-            .${props.sName}-tail {
+            .${props.sName} {
               animation: ${props.sName} 1.5s ease-out 0s 1 normal forwards;
             }
 
@@ -54,12 +54,15 @@ function Skill(props) {
                 transform: scaleX(0);
               }
               100% {
-                transform: scaleX(1);
+                transform: scaleX(${(description[props.sName].prog / 100)});
               }
             }
-            
+          
             .${props.sName}-tail {
               animation: ${props.sName}-tail 1.5s ease-out 0s 1 normal forwards;
+              background-color: rgb(220, 220, 220);
+              background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(220, 220, 220));
+
             }
 
         `}
