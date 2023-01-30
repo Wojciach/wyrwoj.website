@@ -24,10 +24,10 @@ article {
     box-sizing: border-box;
     h2 {
         color: $red;
-      //  margin: 15px 0 5px 80px;
     }
-    div { 
+    >div { 
         display: flex;
+        height: 300px;
         flex-direction: row;
         @media screen and (max-width: 800px) {
             flex-direction: column;
@@ -39,6 +39,7 @@ article {
             position: relative;
             width: 65%;
             margin-right: 10px;
+            margin-bottom: 20px;
             @media screen and (max-width: 800px) {
                 width: 100%;
                 justify-content: left;
@@ -66,7 +67,11 @@ article {
     border-radius: 40px;
     overflow: hidden;
         &:hover {
-            opacity: 0.6;
+            >.skill {
+                background-color: $grey-1;
+                background-image: linear-gradient(to bottom right, rgba($grey-1, 0.4), $grey-1 50%);
+                color: $violet-3;
+            }
         }
 }
 
@@ -95,4 +100,22 @@ article {
   transform: scaleX(0);
   transform-origin: 0 50%;
   transform-box: content-box;
+}
+
+.fake-margin {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 50px;
+}
+
+.clicked {
+    >.skill {
+        background-color: $red;
+        background-image: linear-gradient(to bottom right, rgba($grey-1, 0.4), $red 50%) !important;
+        color: $grey-1 !important;
+    }
+    >.progressBar {
+        background-color: rgb(220, 220, 220);
+        background-image: linear-gradient(to right, rgb(255, 255, 255), $red);
+    }
 }

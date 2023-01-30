@@ -8,30 +8,23 @@ import Introduction from './Introduction';
 
 function App() {
 
-  let componenets = "";
-  for (const iterator in description) {
-    componenets += "< Skill sName='" + iterator + "'/>";
-  }
-
   const [targ, setTarg ] = useState("JavaScript");
 
   useEffect( () => {
 
     function deal(event) {
-      setTarg(event.target.children[0].id);
+      setTarg(event.currentTarget.children[0].id);
     }
 
     const sliders = document.querySelectorAll(".skill_slider");
 
     sliders.forEach(element => {
-      element.addEventListener("mouseenter", deal);
+      element.addEventListener("click", deal);
     });
       
   }, [])
 
-  const style = {
-    padding: "0 40px"
-  }
+
 
   return (
     <>
@@ -39,7 +32,7 @@ function App() {
       <Header />
       <Introduction />
 
-      <article style={style}>
+      <article className='fake-margin'>
         <h2>SKILLS:</h2>
         <div>
           <div id='skillSet'>

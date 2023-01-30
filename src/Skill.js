@@ -16,12 +16,12 @@ function Skill(props) {
     function handleResize() {
       
       sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
-      setTr((sliderWidth - 134) * (description[props.sName].prog / 100));
+      setTr((sliderWidth - 135) * (description[props.sName].prog / 100));
       
     }
 
     document.getElementById("skillSet").addEventListener("mouseenter", () => {
-      setTr((sliderWidth - 134 ) * (description[props.sName].prog / 100));
+      setTr((sliderWidth - 135 ) * (description[props.sName].prog / 100));
       document.getElementById(props.sName).classList.add(props.sName);
       document.getElementById(props.sName + "-tail").classList.add(props.sName + "-tail");
     })
@@ -31,6 +31,12 @@ function Skill(props) {
 
   }, [props.sName]);
 
+  function clickk(event) {
+    document.querySelectorAll('.skill_slider').forEach(element => {
+      element.classList.remove("clicked");
+    });
+    event.currentTarget.classList.toggle("clicked");
+  }
 
    return (
     <> 
@@ -67,7 +73,7 @@ function Skill(props) {
 
         `}
       </style>
-      <div className='skill_slider'>
+      <div className='skill_slider' onClick={clickk}>
         <div id={props.sName}  className={"skill "}> {description[props.sName].name} </div>
         <div id={props.sName + "-tail"} className="progressBar"></div>
       </div>

@@ -5,7 +5,7 @@ header {
     #cv {
         font-family: "Raleway";
         color: $violet-2;
-        padding: 30px;
+        padding: 30px 50px;
         span {
             font-weight: 700;
         }
@@ -13,14 +13,14 @@ header {
     section {
         display: flex;
         flex-direction: column;
-        padding: 40px;
+        padding: 40px 0;
         position: relative;
         background-color: $violet-2;
         background-image: linear-gradient(rgba($grey-1, 0.5), $violet-2 50%);
         color: $grey-1;
         #nameTitle {
             font-size: 1.6em;
-            margin: 30px;
+            margin: 30px 30px 30px 0;
             #name {
                 font-family: 'Space Grotesk', sans-serif;
                 font-weight: 700;
@@ -33,7 +33,7 @@ header {
             }
         }
         #introduction {
-            margin-left: 35%;
+            margin-left: 25%;
         }
     }   
 }
