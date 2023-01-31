@@ -19,20 +19,22 @@ header {
         background-image: linear-gradient(rgba($grey-1, 0.5), $violet-2 50%);
         color: $grey-1;
         #nameTitle {
-            font-size: 1.6em;
-            margin: 30px 30px 30px 0;
+            font-size: 2em;
+            margin: 20px 30px 30px 0;
             #name {
                 font-family: 'Space Grotesk', sans-serif;
                 font-weight: 700;
-                line-height: 0.8em;
+               // line-height: 0.8em;
             }
             #title {
                 font-family: 'Space Grotesk', sans-serif;
                 font-size: 0.7em;
-                line-height: 0.8em;
+             //   line-height: 0.8em;
             }
         }
         #introduction {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 300;
             margin-left: 25%;
         }
     }   

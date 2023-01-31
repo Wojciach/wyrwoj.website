@@ -9,6 +9,7 @@ body {
     width: 100%;
     margin: 0px;
     color: $grey-3;
+    
 }
 
 h2 {
@@ -21,13 +22,12 @@ article {
     display: block;
     position: relative;
     width: 100%;
-    box-sizing: border-box;
+    
     h2 {
         color: $red;
     }
     >div { 
         display: flex;
-        height: 300px;
         flex-direction: row;
         @media screen and (max-width: 800px) {
             flex-direction: column;
@@ -51,7 +51,9 @@ article {
             position: relative;
             width: 35%;
             text-align: justify;
-            @media  (max-width: 800px) {
+            font-size: 0.75em;
+            line-height: 1.6em;
+            @media screen and (max-width: 800px) {
                 width: 100%;
             }
         }
@@ -106,6 +108,10 @@ article {
     max-width: 800px;
     margin: auto;
     padding: 0 50px;
+    box-sizing: border-box;
+    @media screen and (max-width: 400px) {
+        padding: 0 15px;
+    }
 }
 
 .clicked {

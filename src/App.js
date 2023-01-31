@@ -6,7 +6,12 @@ import Skill from './Skill';
 import description from './description';
 import Introduction from './Introduction';
 
+function SkillList() { return (
+  Object.keys(description).map((item)=>(< Skill key={item} sName={item} />))
+) }
+
 function App() {
+
 
   const [targ, setTarg ] = useState("JavaScript");
 
@@ -25,7 +30,6 @@ function App() {
   }, [])
 
 
-
   return (
     <>
 
@@ -36,10 +40,8 @@ function App() {
         <h2>SKILLS:</h2>
         <div>
           <div id='skillSet'>
-            
-            < Skill sName="JavaScript" />
-            < Skill sName="ReactJs" />
-            < Skill sName="HTML" />
+        
+            <SkillList />
 
           </div>
 

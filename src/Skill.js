@@ -35,7 +35,7 @@ function Skill(props) {
     document.querySelectorAll('.skill_slider').forEach(element => {
       element.classList.remove("clicked");
     });
-    event.currentTarget.classList.toggle("clicked");
+    event.currentTarget.classList.add("clicked");
   }
 
    return (
