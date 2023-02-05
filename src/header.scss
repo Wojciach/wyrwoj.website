@@ -37,6 +37,31 @@ header {
             font-weight: 300;
             margin-left: 25%;
         }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            background-color: $red;
+            color: $violet-3;
+            border: none;
+            border-radius: 40px;
+            padding: 5px 14px 5px 20px;
+            margin-top: 7px;
+            >span {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                align-content: center;
+                font-size: 1.5em;
+                line-height: 1em;
+                
+                padding-left: 6px;
+            }
+            &:hover {
+                background-color: $grey-1;
+            }
+        }
     }   
 }
 

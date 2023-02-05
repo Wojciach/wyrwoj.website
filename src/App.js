@@ -5,13 +5,24 @@ import Header from './Header';
 import Skill from './Skill';
 import description from './description';
 import Introduction from './Introduction';
+import Portfolio from './Portfolio';
 
-function SkillList() { return (
+
+function SkillList() { 
+  return (
   Object.keys(description).map((item)=>(< Skill key={item} sName={item} />))
-) }
+  ) 
+}
+
 
 function App() {
 
+
+  function Description() {
+    return (
+      description[targ].desc.map((item)=>(<p key={item}>{item}</p>))
+    )
+  }
 
   const [targ, setTarg ] = useState("JavaScript");
 
@@ -36,9 +47,9 @@ function App() {
       <Header />
       <Introduction />
 
-      <article className='fake-margin'>
-        <h2>SKILLS:</h2>
-        <div>
+      <article>
+        <h2 className='fake-margin'> SKILLS</h2>
+        <div className='fake-margin'>
           <div id='skillSet'>
         
             <SkillList />
@@ -46,10 +57,13 @@ function App() {
           </div>
 
           <div id="skillDesc">
-            {description[targ].desc}
+            <h3>{description[targ].name}</h3>
+            <Description />
           </div>
         </div>
       </article>
+      
+      <Portfolio />
     </>
 
   );

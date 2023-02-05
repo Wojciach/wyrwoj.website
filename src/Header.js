@@ -12,12 +12,15 @@ function Header() {
             <div className="fake-margin">
                 <div id="nameTitle">
                   <div id="name">WOJCIECH WYROSLAK</div>
-                  <div id="title">JUNIOR DEVELOPER</div>
+                  <div id="title">JUNIOR WEB DEVELOPER</div>
                 </div>
                 <div style={{textAlign: "right"}} id="introduction">
                     I am an ambitious fresh web developer seeking employment opportunities to utilize and enhance my skills
                 </div>
-              </div>
+                <button>
+                  Jump to Portfolio <span>&#129046; </span> 
+                </button>
+            </div>
           </section>
         
       </header>

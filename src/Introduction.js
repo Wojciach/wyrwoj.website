@@ -5,8 +5,8 @@ function Introduction() {
     return(
         <section className="fake-margin" >
             <h2>ABOUT ME</h2>
-            <p style={{textAlign: "justify"}}>
-                Hello, my name is [Your Name] and I am a junior web developer. I have recently graduated from [Your Education] and I am excited to take my first steps into the industry. I have a strong foundation in web development technologies such as HTML, CSS and JavaScript, and I have experience building small-scale projects using popular frameworks like React and Angular. I am a fast learner, a team player and always eager to learn new technologies. I am confident that my skills and enthusiasm make me a great fit for any company looking for a junior web developer. I am very excited to start my career as a web developer and I am looking forward to hearing from you.
+            <p style={{textAlign: "justify", paddingBottom: "27px"}}>
+            As a fresh Full Stack Web Developer, I am extremely eager to learn new skills and continuously improve upon the ones I already have. My passion for web development drives me to seek out new challenges and opportunities for growth. I am seeking to join a team that will guide me further into the industry and provide me with the support I need to excel. However, I am also a self-reliant individual who is confident in my ability to solve problems independently and effectively. With my strong problem-solving skills, drive to succeed, and passion for web development, I am confident that I will make a valuable addition to any team.
             </p>
         </section>
     )
