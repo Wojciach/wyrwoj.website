@@ -29,7 +29,8 @@ function App() {
   useEffect( () => {
 
     function deal(event) {
-      setTarg(event.currentTarget.children[0].id);
+      
+      setTarg(event.currentTarget.firstChild.id);
     }
 
     const sliders = document.querySelectorAll(".skill_slider");

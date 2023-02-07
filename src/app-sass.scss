@@ -50,9 +50,7 @@ article {
             justify-content: left;
             position: relative;
             width: 47%;
-            
-           // margin-right: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             @media screen and (max-width: 800px) {
                 width: 100%;
                 justify-content: left;
@@ -74,67 +72,95 @@ article {
     }
 }
 
-
-.skill_slider {
-    cursor: pointer;
-    position: relative;
+.fake-border {
+    border: 2px $grey-1 solid;
+    outline: $violet-2 solid 1px;
     margin: 5px;
-    display: flex;
-    border: 1px solid $violet-2;
     border-radius: 40px;
-    overflow: hidden;
-    >.progressBar {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        transform: scaleX(0);
-        transform-origin: 0 50%;
-        transform-box: content-box;
-      
-        background-color: rgb(220, 220, 220);
-        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(220, 220, 220));
-      }
-    >.skill {
-        display: block;
-        
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 0.6em;
-        background-color: $violet-2;
-        background-image: linear-gradient(to bottom right, rgba($grey-1, 0.4), $violet-2 50%);
-        color: $grey-1;
-        text-align: center;
-        width: 120px;
-        padding: 5px;
-        border-radius: inherit;
-        border: 1px solid $grey-3;
-        z-index: 1;
-        transform-origin: 0 50%;
+    >.skill_slider {
+        cursor: pointer;
+        position: relative;
+        height: 25px;
+        display: flex;
+        border: none;
+        border-radius: 40px;
+        overflow: hidden;
+        >.skill_name {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            z-index: 1;
+            margin-left: 20px;
+            font-size: 0.6em;
+            color: $violet-2b;
+        }
+        >.progressBar {
+            display: flex;
+            align-items: baseline;
+            align-content: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            transform: translateX(-100%);
+            transform-origin: 0 50%;
+            transform-box: content-box;
+            background-color: $violet-0;
+            >.ball{
+                display: flex;
+                position: absolute;
+                right: -12px;
+                z-index: 2;
+                width: 25px;
+                height: 25px;
+                border-radius: 25px;
+                background-color: $violet-1;
+                background-image: linear-gradient(to bottom right, $grey-1, $violet-1 50%)
+            }
+    
+        }
+
+
     }
     &.clicked {
-        >.skill {
-            background-color: $red;
-            background-image: linear-gradient(to bottom right, rgba($grey-1, 0.4), $red 50%) !important;
-            color: $grey-1 !important;
+        outline: $grey-2 solid 1px;
+        >.skill_slider {
+            >.progressBar {
+                background-color: $red-0;
+                >.ball {
+                    background-color: $red !important;
+                    background-image: none;
+                }
+            }
+            &:hover {background-color: $grey-1 }
+            >.skill_name {
+                color: $grey-1;
+            }
+
+
         }
-        >.progressBar {
-            background-color: rgb(220, 220, 220);
-            background-image: linear-gradient(to right, rgb(255, 255, 255), $red) !important;
+        &:hover {
+            >.skill_slider {
+                >.skill_name {
+                    color: $grey-2;
+                }
+                >.progressBar {
+                    background-color: $red-05;
+                }
+            }
+
         }
+
     }
     &:hover {
-        >.skill {
-            background-color: $grey-1;
-            background-image: linear-gradient(to bottom right, rgba($grey-1, 0.4), $grey-1 50%);
-            color: $violet-3;
-        }
-        >.progressBar {
-            background-color: rgb(225, 225, 225);
-            background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(245, 245, 245));
+        >.skill_slider {
+            >.progressBar {
+                background-color: $grey-1;
+            }
         }
     }
 }
-
 
 
 .fake-margin {

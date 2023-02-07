@@ -6,26 +6,31 @@ import description from './description';
 
 function Skill(props) {
 
-  const [tr, setTr] = useState(0);
   const [cl, setCl] = useState("");
+  const [move, setMove] = useState(0);
+  const [wwidth, setWWidth] = useState(0);
   
  
   useEffect( () => {
+
+    function moveThat() {
+      const sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
+        const amount = sliderWidth * (description[props.sName].prog / 100);
+        setMove(amount);
+        setWWidth(sliderWidth);
+    }
+
+    moveThat();
 
     if(props.sName == "JavaScript") {setCl("clicked")};
 
     var sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
 
     function handleResize() {
-      
-      sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
-      setTr((sliderWidth - 131) * (description[props.sName].prog / 100));
-      
+      moveThat();
     }
 
     document.getElementById("skillSet").addEventListener("mouseenter", () => {
-      setTr((sliderWidth - 131 ) * (description[props.sName].prog / 100));
-      document.getElementById(props.sName).classList.add(props.sName);
       document.getElementById(props.sName + "-tail").classList.add(props.sName + "-tail");
     })
     
@@ -35,7 +40,7 @@ function Skill(props) {
   }, [props.sName]);
 
   function clickk(event) {
-    document.querySelectorAll('.skill_slider').forEach(element => {
+    document.querySelectorAll('.fake-border').forEach(element => {
       element.classList.remove("clicked");
     });
     event.currentTarget.classList.add("clicked");
@@ -45,25 +50,16 @@ function Skill(props) {
     <> 
       <style>
         {`
-            @keyframes ${props.sName} {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(${tr}px);
-              }
-            }
             
-            .${props.sName} {
-              animation: ${props.sName} 1.5s ease-out 0s 1 normal forwards;
-            }
 
             @keyframes ${props.sName}-tail {
               0% {
-                transform: scaleX(0);
+                transform: translateX(-100%);
+               
               }
               100% {
-                transform: scaleX(${(description[props.sName].prog / 100)});
+                transform: translateX(${move - wwidth - 12.5}px);
+                
               }
             }
           
@@ -75,10 +71,17 @@ function Skill(props) {
 
         `}
       </style>
-      <div style={{order: description[props.sName].prog}} className={"skill_slider " + cl} onClick={clickk}>
-        <div id={props.sName}  className={"skill "}> {description[props.sName].name} </div>
-        <div id={props.sName + "-tail"} className="progressBar"></div>
-      </div>
+
+          <div className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
+
+              <div className="skill_slider " >
+
+                  <div id={props.sName}  className={"skill "}> </div>
+                  <div className="skill_name">{description[props.sName].name}</div>
+                  <div id={props.sName + "-tail"} className="progressBar"><div className="ball"></div></div>
+
+              </div>
+          </div>
     </>
    )
 }
