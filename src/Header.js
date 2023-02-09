@@ -18,7 +18,7 @@ function Header() {
                     I am an ambitious fresh web developer seeking employment opportunities to utilize and enhance my skills
                 </div>
                 <button>
-                  Jump to Portfolio <span>&#129046; </span> 
+                  Jump to Portfolio <span className="material-symbols-rounded">trending_flat</span>
                 </button>
             </div>
           </section>

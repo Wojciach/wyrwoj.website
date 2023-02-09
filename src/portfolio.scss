@@ -1,40 +1,163 @@
 @import "colorsAndFonts";
 
-#portfolio-content {
-    display: flex;
-    flex-direction: column;
-    
+#portfolio {
     position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+    margin-bottom: 50px;
+    //flex-wrap: wrap;
     
-    
-    color: $grey-1;
-    >#links {
-        display: flex;
-   
-        width: fit-content;
-        flex-direction: column;
-        justify-content: left;
+    button {
         position: relative;
-        
-        margin-right: 10px;
-        margin-bottom: 20px;
-        @media screen and (max-width: 800px) {
-            
-            justify-content: left;
-        }
-        >div {
-            cursor: pointer;
+        display: flex;
+        width: 180px;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        cursor: pointer;
+        background-color: $red;
+        color: $violet-3;
+        border: none;
+        border-radius: 40px;
+        padding: 6px 14px 5px 20px;
+        margin-top: 7px;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        >span {
+            display: flex;
             text-align: center;
-            border-radius: 40px;
-            border: solid 1.5px $violet-2;
-            color: $violet-3;
-            margin: 5px;
-            padding: 5px 10px;
+            align-items: center;
+            align-content: center;
+            font-size: 1.5em;
+            line-height: 1em;
+            padding-left: 6px;
+        }
+        &:hover {
+            background-color: $grey-1;
+        }
+    }
+    >#portfolio-graphic {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: center;
+        align-items: center;
+        #picture {
+            width: 400px;
+            height: 300px;
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("./img/CVMe_website-01.png");
+        }
+        >button {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            padding: 0;
+            background-color: transparent;
+            border: 2px solid $grey-2;
+            color: $grey-2;
+            margin: 0;
+            >span {
+                padding: 0;
+            }
             &:hover {
-                background-color: $red;
-                color: $grey-1;
-                border: $red 1.5px solid;
+                border-color: $red;
+                color: $red;
             }
         }
+    }
+    >#portfolio-description {
+        
+        >div {
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.8em;
+            >h6 {
+                font-size: 0.8em;
+                font-weight: 700;
+                
+            }
+            >div {
+                font-weight: 400;
+                
+            }
+            >* {
+                
+                display: inline;
+            }
+        }
+        >div:first-child {
+            >div {
+                color: $red;
+            }
+        }
+    }
+    
+}
+
+.animationToRight {
+    animation-name: aniR;
+    animation-duration: 0.3s;
+  //  animation-direction:normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aniR {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    49% {
+        transform: translateX(800px);
+        opacity: 0;
+
+    }
+
+    51% {
+        transform: translateX(-800px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animationToLeft {
+    animation-name: aniL;
+    animation-duration: 0.3s;
+  //  animation-direction:normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aniL {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    49% {
+        transform: translateX(-800px);
+        opacity: 0;
+
+    }
+
+    51% {
+        transform: translateX(800px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
