@@ -6,6 +6,7 @@ import Skill from './Skill';
 import description from './description';
 import Introduction from './Introduction';
 import Portfolio from './Portfolio';
+import ContactForm from './ContactForm'
 
 
 function SkillList() { 
@@ -49,22 +50,28 @@ function App() {
       <Introduction />
 
       <article>
-        <h2 className='fake-margin'> SKILLS</h2>
-        <div className='fake-margin'>
-          <div id='skillSet'>
-        
-            <SkillList />
+        <h2 className='fake-margin'> SKILLS </h2>
+        <div className='fake-background'>
+          <div className='fake-margin'>
+              
+                  <div id='skillSet'>
+                
+                       <SkillList />
 
-          </div>
+                  </div>
+              
+                   <div id="skillDesc">
 
-          <div id="skillDesc">
-            <h3>{description[targ].name}</h3>
-            <Description />
+                      <h3>{description[targ].name}</h3>
+                      <Description />
+                  
+                  </div>
           </div>
         </div>
       </article>
       
       <Portfolio />
+      <ContactForm />
     </>
 
   );

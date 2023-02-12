@@ -1,6 +1,10 @@
 import  "./header.scss";
 
 function Header() {
+
+  function portfolioScroll() {
+    document.getElementById("portfolio").scrollIntoView({ behavior: 'smooth'});
+  }
   
   return (
     <>
@@ -17,7 +21,7 @@ function Header() {
                 <div style={{textAlign: "right"}} id="introduction">
                     I am an ambitious fresh web developer seeking employment opportunities to utilize and enhance my skills
                 </div>
-                <button>
+                <button onClick={portfolioScroll}>
                   Jump to Portfolio <span className="material-symbols-rounded">trending_flat</span>
                 </button>
             </div>

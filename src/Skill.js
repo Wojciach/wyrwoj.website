@@ -78,7 +78,9 @@ function Skill(props) {
 
                   <div id={props.sName}  className={"skill "}> </div>
                   <div className="skill_name">{description[props.sName].name}</div>
-                  <div id={props.sName + "-tail"} className="progressBar"><div className="ball"></div></div>
+                  <div id={props.sName + "-tail"} className="progressBar">
+                    <div className="ball"></div>
+                  </div>
 
               </div>
           </div>
