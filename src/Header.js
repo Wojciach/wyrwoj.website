@@ -9,11 +9,12 @@ function Header() {
   return (
     <>
       <header>
-        
+          
           <div className="fake-margin" id="cv"> Digital CV<span> made by:</span></div>
-
+          
           <section>
-            <div className="fake-margin">
+          <div id="graph"></div>
+              <div className="fake-margin">
                 <div id="nameTitle">
                   <div id="name">WOJCIECH WYROSLAK</div>
                   <div id="title">JUNIOR WEB DEVELOPER</div>
@@ -26,7 +27,7 @@ function Header() {
                 </button>
             </div>
           </section>
-        
+          
       </header>
     </>  
   );
