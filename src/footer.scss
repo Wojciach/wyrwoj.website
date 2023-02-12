@@ -1,0 +1,16 @@
+@import "colorsAndFonts";
+
+#footer {
+    position: relative;
+    display: block ;
+
+  //  height: 100px;
+    width: 100%;
+    background-color: $violet-2;
+    color: $grey-1;
+    >div {
+        padding-left: 20%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

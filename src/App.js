@@ -6,7 +6,8 @@ import Skill from './Skill';
 import description from './description';
 import Introduction from './Introduction';
 import Portfolio from './Portfolio';
-import ContactForm from './ContactForm'
+import ContactForm from './ContactForm';
+import Footer from './Footer';
 
 
 function SkillList() { 
@@ -72,6 +73,7 @@ function App() {
       
       <Portfolio />
       <ContactForm />
+      <Footer />
     </>
 
   );
