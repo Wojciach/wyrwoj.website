@@ -64,7 +64,7 @@ useEffect(
         <>
             <section  className="fake-margin" id="portfolio">
 
-                <h2>PORTFOLIO</h2>
+                <h2>MY PORTFOLIO</h2>
                 
                 <div id="portfolio-graphic">
                     <button id="bLeft" onClick={previous}>

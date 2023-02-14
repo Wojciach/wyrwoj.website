@@ -1,62 +1,102 @@
 @import "colorsAndFonts";
 
 #contactForm {
-    box-sizing: border-box;
-    border-radius: 20px 20px 0 0;
-    background-color: $red;
-    padding-bottom: 40px;
-    
-    h2 {
-        padding-top: 30px;
-        color: $grey-1;
-    }
+    position: relative;
 
-    form {
-        display: flex;
+
+    >div.fake-margin {
+        display: block;
         position: relative;
-        flex-direction: column;
-        input, textarea {
-            display: block;
-            margin: 10px;
-            padding: 5px;
-            border-radius: 20px;
-            border: none;
-            background-color: $red-05;
-            width: 40%;
-            
-            &::placeholder {
-                padding-left: 20px;
-                color: white;
-            }
-            &:focus { 
-                outline: none;
-           }
+        box-sizing: border-box;
+        border-radius: 20px 20px 0 0;
+        background-color: $red;
+        padding-bottom: 40px;
+        z-index: 0;
 
+        .graphic {
+            display: block;
+            position: absolute;
+    
+            bottom: -10px;
+            left: -300px;
+    
+            height: 60%;
+            width: 60%;
+    
+            background-image:  url('./img/graphics/interested_graphic.svg');
+            background-repeat: no-repeat;
+            
+            z-index: 1;
+            
+          
+    
+    
         }
-        textarea {
-           
-            width: 100% !important;
-            height: 100px;
-            resize: none;
-        }
-        button {
-            display: flex;
-            align-content: center;
-            align-items: center;
-            justify-content:space-between;
-            border-radius: 20px;
-            border: none;
-            width: auto;
-            padding: 5px 25px;
-            margin-top: 10px;
-            margin-right: auto;
-            margin-left: auto;
-            background-color: $violet-2;
-            color: $violet-3;
-            span {
-                margin-left: 6px;
-            }
-            }
+
+ 
         
+        h2 {
+            padding-top: 30px;
+            color: $grey-1;
+            z-index: 2 ;
+            background-color: transparent;
+            position: relative;
+            
+        }
+
+        form {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            z-index: 2;
+            input, textarea {
+                display: block;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 20px;
+                border: none;
+                background-color: $red-05;
+                width: 40%;
+                
+                &::placeholder {
+                    padding-left: 20px;
+                    color: white;
+                }
+                &:focus { 
+                    outline: none;
+            }
+
+            }
+            textarea {
+            
+                width: 100% !important;
+                height: 100px;
+                resize: none;
+            }
+            button {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content:space-between;
+                border-radius: 20px;
+                border: none;
+                width: auto;
+                padding: 5px 25px;
+                margin-top: 10px;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: $violet-2;
+                color: $violet-3;
+                span {
+                    margin-left: 6px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: $violet-1;
+                }
+            }
+            
+        }
     }
+
 }

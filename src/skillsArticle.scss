@@ -1,0 +1,59 @@
+@import "colorsAndFonts";
+
+article#skillsArticle {
+    
+    padding-top: 5px;
+    padding-bottom: 30px;
+
+    display: block;
+    position: relative;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $grey-1;
+    max-width: 900px;
+    border-radius:  20px;
+    @media screen and (max-width: 900px) {
+        overflow: hidden;
+        
+    }
+
+
+   >.graphic {
+
+    display: block;
+    position: absolute;
+
+    right: -63px;
+    top:0;
+
+    height: 100%;
+    width: 100%;
+    
+   // background-color: red;
+
+    background-image: url("./img/graphics/mad-skillls_graphic.svg");
+  
+    background-repeat: no-repeat;
+    background-position: 100% -14px;
+    background-size: 50%;
+
+   }
+
+
+    >div.fake-background {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        max-width: 900px;
+        border-radius:  20px;
+
+
+    
+    }
+
+}

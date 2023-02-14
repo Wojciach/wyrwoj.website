@@ -10,14 +10,15 @@ function Header() {
     <>
       <header>
           
-          <div className="fake-margin" id="cv"> Digital CV<span> made by:</span></div>
+          
           
           <section>
           <div id="graph"></div>
               <div className="fake-margin">
                 <div id="nameTitle">
-                  <div id="name">WOJCIECH WYROSLAK</div>
-                  <div id="title">JUNIOR WEB DEVELOPER</div>
+                  <div id="cvTitle">Curriculum Vitae</div>
+                  <div id="myName">WOJCIECH WYROSLAK</div>
+                  <div id="jobTitle">JUNIOR WEB DEVELOPER</div>
                 </div>
                 <div style={{textAlign: "right"}} id="introduction">
                     I am an ambitious fresh web developer seeking employment opportunities to utilize and enhance my skills

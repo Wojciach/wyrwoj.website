@@ -1,0 +1,226 @@
+@charset "utf-8";
+	.NormalCharacterStyle18
+{
+	font-family : Space Grotesk;
+	font-size : 58px;
+	line-height : 50.35px;
+	letter-spacing : -1.45px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle20
+{
+	font-family : Space Grotesk;
+	font-size : 58px;
+	line-height : 50.35px;
+	letter-spacing : -1.45px;
+	color : #FF6464;
+	color : rgb(255, 100, 100);
+}
+.NormalCharacterStyle21
+{
+	font-family : Space Grotesk;
+	font-size : 28px;
+	line-height : 24.6px;
+	letter-spacing : -0.7px;
+	color : #656BED;
+	color : rgb(101, 107, 237);
+}
+.NormalCharacterStyle13
+{
+	font-family : Space Grotesk;
+	font-size : 20px;
+	line-height : 26.57px;
+	letter-spacing : -0.5px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle15
+{
+	font-family : Raleway;
+	font-size : 19px;
+	line-height : 27px;
+	letter-spacing : -0.47px;
+	color : #4D4D4D;
+	color : rgb(77, 77, 77);
+}
+.NormalCharacterStyle14
+{
+	font-family : Space Grotesk;
+	font-size : 20px;
+	line-height : 26.57px;
+	letter-spacing : -0.5px;
+	color : #999999;
+	color : rgb(153, 153, 153);
+}
+.NormalCharacterStyle11
+{
+	font-family : Space Grotesk;
+	font-size : 20px;
+	line-height : 26.57px;
+	letter-spacing : -0.5px;
+	color : #999999;
+	color : rgb(153, 153, 153);
+}
+.NormalCharacterStyle19
+{
+	font-family : Space Grotesk;
+	font-size : 58px;
+	line-height : 50.35px;
+	letter-spacing : -1.45px;
+	color : #FF6464;
+	color : rgb(255, 100, 100);
+}
+.NormalCharacterStyle17
+{
+	font-family : Space Grotesk;
+	font-size : 29px;
+	line-height : 33.85px;
+	letter-spacing : -0.73px;
+	color : #F2F2F2;
+	color : rgb(242, 242, 242);
+}
+.NormalCharacterStyle16
+{
+	font-family : Raleway;
+	font-size : 32px;
+	line-height : 26.16px;
+	letter-spacing : -0.16px;
+	color : #23008E;
+	color : rgb(35, 0, 142);
+}
+.NormalCharacterStyle12
+{
+	font-family : Space Grotesk;
+	font-size : 20px;
+	line-height : 26.57px;
+	letter-spacing : -0.5px;
+	color : #999999;
+	color : rgb(153, 153, 153);
+}
+.NormalCharacterStyle23
+{
+	font-family : Myriad Pro;
+	font-size : 53px;
+	line-height : 45.38px;
+	letter-spacing : -1.33px;
+	color : #F2F2F2;
+	color : rgb(242, 242, 242);
+}
+.NormalCharacterStyle22
+{
+	font-family : Space Grotesk;
+	font-size : 58px;
+	line-height : 50.35px;
+	letter-spacing : -1.45px;
+	color : #FF6464;
+	color : rgb(255, 100, 100);
+}
+.NormalCharacterStyle24
+{
+	font-family : Raleway;
+	font-size : 40px;
+	line-height : 28.23px;
+	letter-spacing : -0.2px;
+	color : #E6E6E6;
+	color : rgb(230, 230, 230);
+}
+.NormalCharacterStyle1
+{
+	font-family : Raleway;
+	font-size : 25px;
+	line-height : 20.2px;
+	letter-spacing : -0.12px;
+	color : #23008E;
+	color : rgb(35, 0, 142);
+}
+.NormalCharacterStyle
+{
+	font-family : Raleway;
+	font-size : 18px;
+	line-height : 28px;
+	letter-spacing : -0.45px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle2
+{
+	font-family : Raleway;
+	font-size : 18px;
+	line-height : 28px;
+	letter-spacing : -0.45px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle3
+{
+	font-family : Raleway;
+	font-size : 18px;
+	line-height : 28px;
+	letter-spacing : -0.45px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle4
+{
+	font-family : Raleway;
+	font-size : 18px;
+	line-height : 28px;
+	letter-spacing : -0.45px;
+	color : #FFFFFF;
+	color : rgb(255, 255, 255);
+}
+.NormalCharacterStyle5
+{
+	font-family : Myriad Pro;
+	font-size : 18px;
+	line-height : 28px;
+	letter-spacing : -0.45px;
+	color : #4D4D4D;
+	color : rgb(77, 77, 77);
+}
+.NormalCharacterStyle6
+{
+	font-family : Raleway;
+	font-size : 18px;
+	line-height : 28px;
+	letter-spacing : -0.45px;
+	color : #4D4D4D;
+	color : rgb(77, 77, 77);
+}
+.NormalCharacterStyle8
+{
+	font-family : Raleway;
+	font-size : 28px;
+	line-height : 20.3px;
+	letter-spacing : -0.14px;
+	color : #F2F2F2;
+	color : rgb(242, 242, 242);
+}
+.NormalCharacterStyle7
+{
+	font-family : Raleway;
+	font-size : 18px;
+	line-height : 24px;
+	letter-spacing : -0.45px;
+	color : #A1A8FF;
+	color : rgb(161, 168, 255);
+}
+.NormalCharacterStyle10
+{
+	font-family : Space Grotesk;
+	font-size : 20px;
+	line-height : 26.57px;
+	letter-spacing : -0.5px;
+	color : #999999;
+	color : rgb(153, 153, 153);
+}
+.NormalCharacterStyle9
+{
+	font-family : Space Grotesk;
+	font-size : 20px;
+	line-height : 26.57px;
+	letter-spacing : -0.5px;
+	color : #999999;
+	color : rgb(153, 153, 153);
+}

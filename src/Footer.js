@@ -7,7 +7,7 @@ function Footer() {
 
         <>
             <div id="footer">
-                <div>Curiculum Vitae</div> 
+                <div>Curriculum Vitae</div> 
             </div>
         </>
     )
