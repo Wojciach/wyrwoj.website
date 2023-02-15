@@ -1,30 +1,20 @@
 
-import './app-sass.scss';
-import './skills.scss';
-import {useState, useEffect} from "react";
+import './app.scss';
+
 import Header from './Header';
-import SkillsArticle from './SkillsArticle'
-import Skill from './Skill';
-import description from './description';
 import Introduction from './Introduction';
+import SkillsArticle from './SkillsArticle'
 import Portfolio from './Portfolio';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
 
 
-
-
 function App() {
 
 
-
-
-
-
-
   return (
-    <>
 
+    <main>
       <Header />
       <Introduction />
 
@@ -33,7 +23,7 @@ function App() {
       <Portfolio />
       <ContactForm />
       <Footer />
-    </>
+    </main>
 
   );
 

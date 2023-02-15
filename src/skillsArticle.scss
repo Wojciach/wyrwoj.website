@@ -3,7 +3,7 @@
 article#skillsArticle {
     
     padding-top: 5px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
     display: block;
     position: relative;
@@ -13,9 +13,9 @@ article#skillsArticle {
     margin-right: auto;
 
     background-color: $grey-1;
-    max-width: 900px;
+    max-width: 850px;
     border-radius:  20px;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 850px) {
         overflow: hidden;
         
     }
@@ -26,7 +26,7 @@ article#skillsArticle {
     display: block;
     position: absolute;
 
-    right: -63px;
+    right: -60px;
     top:0;
 
     height: 100%;
@@ -52,7 +52,46 @@ article#skillsArticle {
         max-width: 900px;
         border-radius:  20px;
 
-
+        #skills { 
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+            @media screen and (max-width: 800px) {
+                flex-direction: column;
+            }
+            #skillSet {
+                
+                display: flex;
+                position: relative;
+                flex-direction: column-reverse;
+                justify-content: left;
+                width: 47%;
+                margin-bottom: 12px;
+                @media screen and (max-width: 800px) {
+                    width: 100%;
+                    justify-content: left;
+                }
+                
+        
+            }
+            #skillDesc {
+                font-family: 'Raleway', sans-serif;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 47%;
+                text-align: justify;
+                font-size: 0.75em;
+                line-height: 1.6em;
+                @media screen and (max-width: 800px) {
+                    width: 100%;
+                }
+                p {
+                    font-family: 'Raleway', sans-serif;
+                }
+            }
+        }
     
     }
 

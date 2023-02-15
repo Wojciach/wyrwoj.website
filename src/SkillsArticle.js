@@ -49,10 +49,8 @@ function SkillsArticle() {
         <div className='fake-background'>
           <div id='skills' className='fake-margin'>
               
-                  <div id='skillSet'>
-                
-                       <SkillList />
-
+                  <div id='skillSet'>   
+                      <SkillList />
                   </div>
               
                    <div id="skillDesc">

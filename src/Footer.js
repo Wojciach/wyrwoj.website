@@ -6,9 +6,9 @@ function Footer() {
     return(
 
         <>
-            <div id="footer">
-                <div>Curriculum Vitae</div> 
-            </div>
+            <footer id="footer">
+                <div className="fake-margin">Curriculum Vitae</div> 
+            </footer>
         </>
     )
 }

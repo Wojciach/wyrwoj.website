@@ -1,6 +1,8 @@
 import {useState, useEffect} from "react";
 import description from './description';
 
+import "./skill.scss";
+
 
 
 
@@ -72,7 +74,7 @@ function Skill(props) {
         `}
       </style>
 
-          <div className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
+          <div id="skill" className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
 
               <div className="skill_slider " >
 
