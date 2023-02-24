@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo} from "react";
 
 import "./skillsArticle.scss";
 
@@ -7,6 +7,8 @@ import Skill from "./Skill";
 
 
 function SkillList() { 
+console.log("SkillList");
+
     return (
     Object.keys(description).map((item)=>(< Skill key={item} sName={item} />))
     ) 
@@ -14,8 +16,12 @@ function SkillList() {
 
   
 function SkillsArticle() {
+console.log("SkillsArticle");
+
 
     function Description() {
+    console.log("Description");
+    
         return (
           description[targ].desc.map((item)=>(<p key={item}>{item}</p>))
         )
@@ -65,4 +71,4 @@ function SkillsArticle() {
     )
 }
 
-export default SkillsArticle;
+export default memo(SkillsArticle);

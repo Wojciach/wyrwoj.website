@@ -10,7 +10,7 @@ import Footer from './Footer';
 
 
 function App() {
-
+console.log("App");
 
   return (
 

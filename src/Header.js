@@ -1,9 +1,10 @@
 import  "./header.scss";
 
 function Header() {
+console.log("Header");
 
   function portfolioScroll() {
-    document.getElementById("portfolio").scrollIntoView({ behavior: 'smooth'});
+    document.getElementById("portfolio").scrollIntoView({ behavior: 'smooth', block: 'center'});
   }
   
   return (

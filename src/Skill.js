@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, memo} from "react";
 import description from './description';
 
 import "./skill.scss";
@@ -7,6 +7,7 @@ import "./skill.scss";
 
 
 function Skill(props) {
+console.log("Skill");
 
   const [cl, setCl] = useState("");
   const [move, setMove] = useState(0);
@@ -26,7 +27,7 @@ function Skill(props) {
 
     if(props.sName == "JavaScript") {setCl("clicked")};
 
-    var sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
+   // var sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
 
     function handleResize() {
       moveThat();
@@ -57,7 +58,7 @@ function Skill(props) {
             @keyframes ${props.sName}-tail {
               0% {
                 transform: translateX(-100%);
-               
+
               }
               100% {
                 transform: translateX(${move - wwidth - 12.5}px);
@@ -92,5 +93,5 @@ function Skill(props) {
   
  
 
-  export default Skill;
+  export default memo(Skill);
   

@@ -1,7 +1,7 @@
 import "./introduction.scss"
 
 function Introduction() {
-
+console.log("Introduction");
 
     return(
         <section id="mainIntroduction" className="fake-margin" >
