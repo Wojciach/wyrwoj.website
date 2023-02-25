@@ -21,31 +21,55 @@ function ContactForm() {
         document.getElementById("customAlert").style.display = "flex";
     }
 
+    function setAlert(h5 = "", h6 = "", p = "") {
+        
+        document.querySelector("#customAlert div h5").innerHTML = h5;
+        document.querySelector("#customAlert div h6").innerHTML = h6;
+        document.querySelector("#customAlert div p").innerHTML = p;
+        
+    }
+
 
     function sendForm() {
 
-        console.log()
+        alert("oja!");
+        function validateEmail(email) {
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
+          }
     
         var rName = document.getElementById("rName").value;
         var rPhone = document.getElementById("rPhone").value;
         var rEmail = document.getElementById("rEmail").value;
         var rMsg = document.getElementById("rMsg").value;
 
-        openAlert();
-        return;
-        console.log(" x ");
+        if(rName == "" )  return;
+        if(rPhone == "" )  return;
+        if(rEmail == "" )  return;
+        if(rMsg== "" )  return;
+        if(!validateEmail(rEmail)) return;
+
+      //  setAlert("", "", "");
+      //  openAlert();
+        
   
-        fetch(`http://localhost/test/sendForm.php?rName=${rName}&rPhone=${rPhone}&rEmail=${rEmail}&rMsg=${rMsg}` , {
+        fetch(`http://192.168.1.254/test/sendForm.php?rName=${rName}&rPhone=${rPhone}&rEmail=${rEmail}&rMsg=${rMsg}` , {
                 mode: 'cors'
             })
+          //  .then((response) => {if(response.ok){setAlert("a","a","a"); openAlert(); return;}})
             .then(response => response.json())
             .then(data => {
                 // Process the data returned by the PHP script
                console.log(data);
+               setAlert("", "", data.msgPHP);
+               openAlert();
               })
+              
               .catch(error => {
                 // Handle any errors that occur during the fetch request
-                console.error(error);
+                setAlert("Sorry ;(", "There is a problem with this request", "You can contact me via alternative email: <br> <b>wyrwoj@gmail.com</b>");
+                setAlert("", "", error.message);
+                openAlert();
               });
    
 /*
@@ -87,11 +111,11 @@ function ContactForm() {
                 
                 
                 <form>
-                    <input id="rName" type="text" placeholder="Name & Surname..."/>
-                    <input id="rPhone" type="tel" placeholder="Telephone..."/>
-                    <input id="rEmail" type="email" placeholder="Email..."/>
+                    <input id="rName" type="text" placeholder="Name & Surname..." required maxLength="50"/>
+                    <input id="rPhone" type="tel" placeholder="Telephone..." required maxLength="20"/>
+                    <input id="rEmail" type="email" placeholder="Email..." required maxLength="100"/>
 
-                    <textarea id="rMsg" rows="130" placeholder="Tell me more..."></textarea>
+                    <textarea id="rMsg" rows="130" placeholder="Tell me more..." required maxLength="1000"></textarea>
 
                     <button onClick={sendForm}>send<span className="material-symbols-rounded">trending_flat</span></button> 
                 </form>
