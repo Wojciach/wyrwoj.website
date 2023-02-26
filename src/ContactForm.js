@@ -32,22 +32,27 @@ function ContactForm() {
 
     function sendForm() {
 
-        alert("oja!");
         function validateEmail(email) {
             const re = /\S+@\S+\.\S+/;
             return re.test(email);
-          }
+        }
+
+        function validateInternationalPhoneNumber(phoneNumber) {
+            var regex = /^\+?(?:[0-9] ?){6,14}[0-9]$/;
+            return regex.test(phoneNumber);
+        }
     
         var rName = document.getElementById("rName").value;
         var rPhone = document.getElementById("rPhone").value;
         var rEmail = document.getElementById("rEmail").value;
         var rMsg = document.getElementById("rMsg").value;
 
-        if(rName == "" )  return;
-        if(rPhone == "" )  return;
-        if(rEmail == "" )  return;
-        if(rMsg== "" )  return;
+        if(rName === "" )  return;
+        if(rPhone === "" )  return;
+        if(rEmail === "" )  return;
+        if(rMsg === "" )  return;
         if(!validateEmail(rEmail)) return;
+        if(!validateInternationalPhoneNumber(rPhone)) return;
 
       //  setAlert("", "", "");
       //  openAlert();
@@ -56,11 +61,11 @@ function ContactForm() {
         fetch(`http://192.168.1.254/test/sendForm.php?rName=${rName}&rPhone=${rPhone}&rEmail=${rEmail}&rMsg=${rMsg}` , {
                 mode: 'cors'
             })
-          //  .then((response) => {if(response.ok){setAlert("a","a","a"); openAlert(); return;}})
+          
             .then(response => response.json())
             .then(data => {
                 // Process the data returned by the PHP script
-               console.log(data);
+             //  console.log(data);
                setAlert("", "", data.msgPHP);
                openAlert();
               })
@@ -68,24 +73,8 @@ function ContactForm() {
               .catch(error => {
                 // Handle any errors that occur during the fetch request
                 setAlert("Sorry ;(", "There is a problem with this request", "You can contact me via alternative email: <br> <b>wyrwoj@gmail.com</b>");
-                setAlert("", "", error.message);
                 openAlert();
               });
-   
-/*
-              fetch(`http://localhost/test/sendEmail.php`)
-              .then(response => response.text())
-              .then(data => {
-                  // Process the data returned by the PHP script
-                 console.log(data);
-                })
-                .catch(error => {
-                  // Handle any errors that occur during the fetch request
-                  console.error(error);
-                });
-
-            */
-        
 
 
 
@@ -112,7 +101,7 @@ function ContactForm() {
                 
                 <form>
                     <input id="rName" type="text" placeholder="Name & Surname..." required maxLength="50"/>
-                    <input id="rPhone" type="tel" placeholder="Telephone..." required maxLength="20"/>
+                    <input id="rPhone" type="tel" placeholder="Telephone..." required maxLength="20" pattern="^\+?(?:[0-9] ?){6,14}[0-9]$"/>
                     <input id="rEmail" type="email" placeholder="Email..." required maxLength="100"/>
 
                     <textarea id="rMsg" rows="130" placeholder="Tell me more..." required maxLength="1000"></textarea>
