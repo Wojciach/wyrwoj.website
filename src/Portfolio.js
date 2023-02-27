@@ -9,12 +9,8 @@ import pic3 from "./img/VerbMe_mockup06.gif";
 
 
 
-//<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
-
-
 function Portfolio() {
-console.log("Portfolio");
+//console.log("Portfolio");
 
 
     const pics = [pic1, pic2, pic3];
@@ -22,7 +18,6 @@ console.log("Portfolio");
     const [which, setWhich] = useState(0);
 
     function followAlink() {
-        console.log(linkDesc[which].link);
        window.open(linkDesc[which].link);
     }
 

@@ -7,7 +7,7 @@ import "./skill.scss";
 
 
 function Skill(props) {
-console.log("Skill");
+//console.log("Skill");
 
   const [cl, setCl] = useState("");
   const [move, setMove] = useState(0);
@@ -27,10 +27,13 @@ console.log("Skill");
 
     if(props.sName == "JavaScript") {setCl("clicked")};
 
-   // var sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
-
+    let timeoutID;
     function handleResize() {
-      moveThat();
+
+      clearTimeout(timeoutID);
+
+      timeoutID = setTimeout(moveThat, 200);
+     // moveThat();
     }
 
     document.getElementById("skillSet").addEventListener("mouseenter", () => {
@@ -67,7 +70,7 @@ console.log("Skill");
             }
           
             .${props.sName}-tail {
-              animation: ${props.sName}-tail 1.5s ease-out 0s 1 normal forwards;
+              animation: ${props.sName}-tail 1s ease-out 0s 1 normal forwards;
 
 
             }

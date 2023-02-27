@@ -4,7 +4,7 @@ import {useEffect, memo } from "react";
 
 
 function ContactForm() {
-
+//console.log('ContactForm')
     useEffect(
         ()=> {
 
@@ -57,7 +57,7 @@ function ContactForm() {
       //  setAlert("", "", "");
       //  openAlert();
         
-  
+        document.body.style.cursor = 'wait';
         fetch(`http://192.168.1.254/test/sendForm.php?rName=${rName}&rPhone=${rPhone}&rEmail=${rEmail}&rMsg=${rMsg}` , {
                 mode: 'cors'
             })
@@ -68,12 +68,14 @@ function ContactForm() {
              //  console.log(data);
                setAlert("", "", data.msgPHP);
                openAlert();
+               document.body.style.cursor = '';
               })
               
               .catch(error => {
                 // Handle any errors that occur during the fetch request
-                setAlert("Sorry ;(", "There is a problem with this request", "You can contact me via alternative email: <br> <b>wyrwoj@gmail.com</b>");
+                setAlert("Sorry ;(", "There is a problem with this request", "Please contact me via alternative email: <br> <b>wyrwoj@gmail.com</b>");
                 openAlert();
+                document.body.style.cursor = '';
               });
 
 

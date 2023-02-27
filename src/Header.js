@@ -1,7 +1,7 @@
 import  "./header.scss";
 
 function Header() {
-console.log("Header");
+//console.log("Header");
 
   function portfolioScroll() {
     document.getElementById("portfolio").scrollIntoView({ behavior: 'smooth', block: 'center'});
@@ -22,7 +22,7 @@ console.log("Header");
                   <div id="jobTitle">JUNIOR WEB DEVELOPER</div>
                 </div>
                 <div style={{textAlign: "right"}} id="introduction">
-                    I am an ambitious fresh web developer seeking employment opportunities to utilize and enhance my skills
+                    <span>I am an ambitious fresh web developer seeking employment opportunities to utilize and enhance my skills</span>
                 </div>
                 <button onClick={portfolioScroll}>
                   Jump to Portfolio <span className="material-symbols-rounded">trending_flat</span>

@@ -7,7 +7,7 @@ import Skill from "./Skill";
 
 
 function SkillList() { 
-console.log("SkillList");
+//console.log("SkillList");
 
     return (
     Object.keys(description).map((item)=>(< Skill key={item} sName={item} />))

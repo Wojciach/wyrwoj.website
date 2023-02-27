@@ -1,7 +1,7 @@
 import "./footer.scss"
 
 function Footer() {
-    console.log("Footer");
+//console.log("Footer");
     
     return(
 
