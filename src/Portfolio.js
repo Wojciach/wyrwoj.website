@@ -1,22 +1,25 @@
 import "./portfolio.scss";
 import linkDesc from "./linksAndDescriptions.js";
-import {useState, useEffect} from "react";
+import {useState, useEffect, memo} from "react";
 
 import pic1 from "./img/VerbMe_mockup03.jpg";
 import pic2 from "./img/VerbMe_mockup04.jpg";
-import pic3 from "./img/VerbMe_mockup05.jpg";
+import pic3 from "./img/VerbMe_mockup06.gif";
 
-
-
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 
 
 function Portfolio() {
+//console.log("Portfolio");
+
 
     const pics = [pic1, pic2, pic3];
     const howMany = linkDesc.length;
     const [which, setWhich] = useState(0);
+
+    function followAlink() {
+       window.open(linkDesc[which].link);
+    }
 
 function next() {
    
@@ -55,6 +58,16 @@ useEffect(
         document.getElementById('bLeft').classList.add("clickable");
         else
         document.getElementById('bLeft').classList.remove("clickable");
+
+
+        document.getElementById('followLink').classList.add("clickable");
+        if(which == 2) {
+            document.getElementById('followLink').classList.remove("clickable");
+        } else {
+            document.getElementById('followLink').classList.add("clickable");
+        }
+        
+
     }, [which]
 )
 
@@ -64,7 +77,7 @@ useEffect(
         <>
             <section  className="fake-margin" id="portfolio">
 
-                <h2>PORTFOLIO</h2>
+                <h2>MY PORTFOLIO</h2>
                 
                 <div id="portfolio-graphic">
                     <button id="bLeft" onClick={previous}>
@@ -78,7 +91,7 @@ useEffect(
                     </button>
                 </div>
                <div className="separator"> </div>
-                <button>view website <span className="material-symbols-rounded">trending_flat</span></button>
+                <button id="followLink" onClick={followAlink}>view website <span className="material-symbols-rounded">trending_flat</span></button>
 
                 <div id="portfolio-description">
                     <div>
@@ -94,4 +107,4 @@ useEffect(
     )
 }
 
-export default Portfolio;
+export default memo(Portfolio);

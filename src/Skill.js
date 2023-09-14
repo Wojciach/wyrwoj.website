@@ -1,10 +1,13 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, memo} from "react";
 import description from './description';
+
+import "./skill.scss";
 
 
 
 
 function Skill(props) {
+//console.log("Skill");
 
   const [cl, setCl] = useState("");
   const [move, setMove] = useState(0);
@@ -24,10 +27,13 @@ function Skill(props) {
 
     if(props.sName == "JavaScript") {setCl("clicked")};
 
-    var sliderWidth = document.getElementsByClassName("skill_slider")[0].clientWidth;
-
+    let timeoutID;
     function handleResize() {
-      moveThat();
+
+      clearTimeout(timeoutID);
+
+      timeoutID = setTimeout(moveThat, 200);
+     // moveThat();
     }
 
     document.getElementById("skillSet").addEventListener("mouseenter", () => {
@@ -55,7 +61,7 @@ function Skill(props) {
             @keyframes ${props.sName}-tail {
               0% {
                 transform: translateX(-100%);
-               
+
               }
               100% {
                 transform: translateX(${move - wwidth - 12.5}px);
@@ -64,7 +70,7 @@ function Skill(props) {
             }
           
             .${props.sName}-tail {
-              animation: ${props.sName}-tail 1.5s ease-out 0s 1 normal forwards;
+              animation: ${props.sName}-tail 1s ease-out 0s 1 normal forwards;
 
 
             }
@@ -72,7 +78,7 @@ function Skill(props) {
         `}
       </style>
 
-          <div className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
+          <div id="skill" className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
 
               <div className="skill_slider " >
 
@@ -90,5 +96,5 @@ function Skill(props) {
   
  
 
-  export default Skill;
+  export default memo(Skill);
   

@@ -1,14 +1,14 @@
 import "./footer.scss"
 
 function Footer() {
- 
+//console.log("Footer");
     
     return(
 
         <>
-            <div id="footer">
-                <div>Curiculum Vitae</div> 
-            </div>
+            <footer id="footer">
+                <div className="fake-margin">Curriculum Vitae</div> 
+            </footer>
         </>
     )
 }

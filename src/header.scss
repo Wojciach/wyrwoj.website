@@ -1,33 +1,67 @@
 @import "colorsAndFonts";
+//@import "main-banner_graphic.svg";
 
 header {
     width: 100%;
-    #cv {
-        font-family: "Raleway";
-        color: $violet-2;
-        padding: 30px 50px;
-        span {
-            font-weight: 700;
+    position: relative;
+    #graph {
+       
+        top: -7px;
+        
+        left: 0;
+
+        opacity: 1;
+
+        width: 100%;
+        height: 105%;
+       
+        display: block;
+        position: absolute;
+        background-image:  linear-gradient(355deg, $red, $violet-2 35%);
+        
+        z-index: 0;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/graphics/main-banner_graphic.svg');
+            background-repeat: no-repeat;
+            background-size:  cover;
+            opacity: .7;
         }
     }
+    
     section {
         display: flex;
         flex-direction: column;
         padding: 40px 0;
         position: relative;
         background-color: $violet-2;
-        background-image: linear-gradient(rgba($grey-1, 0.5), $violet-2 50%);
+        border-radius: 0 0 20px 20px;
         color: $grey-1;
+        overflow: hidden;
         #nameTitle {
-            font-size: 2em;
-            margin: 20px 30px 30px 0;
-            #name {
-                font-family: 'Space Grotesk', sans-serif;
-                font-weight: 700;
-               // line-height: 0.8em;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 1.5em;
+            margin: 20px 30px 0 0;
+
+            #cvTitle {
+                font-family: 'Raleway', sans-serif;
             }
-            #title {
-                font-family: 'Space Grotesk', sans-serif;
+            
+            #myName {
+                
+               font-weight: 700;
+                line-height: 0.8em;
+            }
+            #jobTitle {
+                
                 font-size: 0.7em;
              //   line-height: 0.8em;
             }
@@ -35,9 +69,16 @@ header {
         #introduction {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 300;
-            margin-left: 25%;
+            font-size: 0.8em;
+            margin-left: 50%;
+            width: 50%;
+            span {
+                background-color: $violet-1;
+                padding: 1px;
+            }
         }
         button {
+            
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -47,7 +88,7 @@ header {
             border: none;
             border-radius: 40px;
             padding: 5px 14px 5px 20px;
-            margin-top: 7px;
+           
             >span {
                 display: flex;
                 text-align: center;

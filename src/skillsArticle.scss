@@ -1,0 +1,98 @@
+@import "colorsAndFonts";
+
+article#skillsArticle {
+    
+    padding-top: 5px;
+    padding-bottom: 20px;
+
+    display: block;
+    position: relative;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $grey-1;
+    max-width: 850px;
+    border-radius:  20px;
+    @media screen and (max-width: 850px) {
+        overflow: hidden;
+        
+    }
+
+
+   >.graphic {
+
+    display: block;
+    position: absolute;
+
+    right: -60px;
+    top:0;
+
+    height: 100%;
+    width: 100%;
+    
+   // background-color: red;
+
+    background-image: url("./img/graphics/mad-skillls_graphic.svg");
+  
+    background-repeat: no-repeat;
+    background-position: 100% -14px;
+    background-size: 50%;
+
+   }
+
+
+    >div.fake-background {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        max-width: 900px;
+        border-radius:  20px;
+
+        #skills { 
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+            @media screen and (max-width: 800px) {
+                flex-direction: column;
+            }
+            #skillSet {
+                
+                display: flex;
+                position: relative;
+                flex-direction: column-reverse;
+                justify-content: left;
+                width: 47%;
+                margin-bottom: 12px;
+                @media screen and (max-width: 800px) {
+                    width: 100%;
+                    justify-content: left;
+                }
+                
+        
+            }
+            #skillDesc {
+                font-family: 'Raleway', sans-serif;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width: 47%;
+                text-align: justify;
+                font-size: 0.75em;
+                line-height: 1.6em;
+                @media screen and (max-width: 800px) {
+                    width: 100%;
+                }
+                p {
+                    font-family: 'Raleway', sans-serif;
+                }
+            }
+        }
+    
+    }
+
+}

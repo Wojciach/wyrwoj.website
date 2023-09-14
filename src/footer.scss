@@ -2,15 +2,16 @@
 
 #footer {
     position: relative;
-    display: block ;
-
+    display: flex;
+    height: 65px;
+    
   //  height: 100px;
     width: 100%;
+
     background-color: $violet-2;
-    color: $grey-1;
+    color: $violet-0;
     >div {
-        padding-left: 20%;
-        padding-top: 30px;
-        padding-bottom: 30px;
+      width: 100%;
+      
     }
 }
