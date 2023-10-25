@@ -61,14 +61,14 @@ useEffect(
 
 
         document.getElementById('followLink').classList.add("clickable");
-        if(which == 2) {
+        if(which === 2) {
             document.getElementById('followLink').classList.remove("clickable");
         } else {
             document.getElementById('followLink').classList.add("clickable");
         }
         
 
-    }, [which]
+    }, [which, howMany]
 )
 
 
@@ -84,7 +84,7 @@ useEffect(
                         <span className="material-symbols-rounded">chevron_left</span>
                     </button>
                     <div id="picture">
-                        <img src={pics[which]} />
+                        <img src={pics[which]} alt="portfolio thumbnail"/>
                     </div>
                     <button id="bRight" onClick={next}>
                         <span className="material-symbols-rounded">chevron_right</span>

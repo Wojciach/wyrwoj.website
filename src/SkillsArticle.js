@@ -16,11 +16,11 @@ function SkillList() {
 
   
 function SkillsArticle() {
-console.log("SkillsArticle");
+//console.log("SkillsArticle");
 
 
     function Description() {
-    console.log("Description");
+    //console.log("Description");
     
         return (
           description[targ].desc.map((item)=>(<p key={item}>{item}</p>))

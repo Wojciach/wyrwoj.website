@@ -2,7 +2,6 @@ import "./contactForm.scss";
 import {useEffect, memo } from "react";
 
 
-
 function ContactForm() {
 //console.log('ContactForm')
     useEffect(
@@ -45,7 +44,7 @@ function ContactForm() {
         var rName = document.getElementById("rName").value;
         var rPhone = document.getElementById("rPhone").value;
         var rEmail = document.getElementById("rEmail").value;
-        var rMsg = document.getElementById("rMsg").value;
+        var rMsg = document.getElementById("rMsg").value; 
 
         if(rName === "" )  return;
         if(rPhone === "" )  return;
@@ -56,16 +55,24 @@ function ContactForm() {
 
       //  setAlert("", "", "");
       //  openAlert();
+
+        const formData = new FormData();
+        formData.append('rName', rName);
+        formData.append('rPhone', rPhone);
+        formData.append('rEmail', rEmail);
+        formData.append('rMsg', rMsg);
         
         document.body.style.cursor = 'wait';
-        fetch(`http://192.168.1.254/test/sendForm.php?rName=${rName}&rPhone=${rPhone}&rEmail=${rEmail}&rMsg=${rMsg}` , {
-                mode: 'cors'
-            })
-          
+
+        fetch('./php/sendForm.php', {
+            method: 'POST',
+            body: formData
+          })
+   
             .then(response => response.json())
             .then(data => {
                 // Process the data returned by the PHP script
-             //  console.log(data);
+               
                setAlert("", "", data.msgPHP);
                openAlert();
                document.body.style.cursor = '';
@@ -74,6 +81,7 @@ function ContactForm() {
               .catch(error => {
                 // Handle any errors that occur during the fetch request
                 setAlert("Sorry ;(", "There is a problem with this request", "Please contact me via alternative email: <br> <b>wyrwoj@gmail.com</b>");
+                setAlert(error);
                 openAlert();
                 document.body.style.cursor = '';
               });
@@ -82,7 +90,7 @@ function ContactForm() {
 
     }
 
-    console.log("ContactForm");
+    
     return(
         <section id="contactForm">
 

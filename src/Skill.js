@@ -25,7 +25,7 @@ function Skill(props) {
 
     moveThat();
 
-    if(props.sName == "JavaScript") {setCl("clicked")};
+    if(props.sName === "JavaScript") {setCl("clicked")};
 
     let timeoutID;
     function handleResize() {
@@ -83,7 +83,7 @@ function Skill(props) {
               <div className="skill_slider " >
 
                   <div id={props.sName}  className={"skill "}> </div>
-                  <div className="skill_name">{description[props.sName].name}</div>
+                  <div className="skill_name">{description[props.sName].name} &nbsp; <span> / {description[props.sName].comment}</span></div>
                   <div id={props.sName + "-tail"} className="progressBar">
                     <div className="ball"></div>
                   </div>
