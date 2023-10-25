@@ -55,7 +55,7 @@ function ContactForm() {
 
       //  setAlert("", "", "");
       //  openAlert();
-
+            //new fix about PHP not working wrong branch merged
         const formData = new FormData();
         formData.append('rName', rName);
         formData.append('rPhone', rPhone);
