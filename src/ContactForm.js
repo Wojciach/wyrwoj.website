@@ -1,14 +1,11 @@
 import "./contactForm.scss";
 import {useEffect, memo } from "react";
 
-
 function ContactForm() {
 //console.log('ContactForm')
     useEffect(
         ()=> {
-
             document.querySelector("#contactForm form").addEventListener("submit", function(event){ event.preventDefault();})
-
         }, []
     );
 
@@ -21,12 +18,10 @@ function ContactForm() {
     }
 
     function setAlert(h5 = "", h6 = "", p = "") {
-        
-        document.querySelector("#customAlert div h5").innerHTML = h5;
+                document.querySelector("#customAlert div h5").innerHTML = h5;
         document.querySelector("#customAlert div h6").innerHTML = h6;
         document.querySelector("#customAlert div p").innerHTML = p;
-        
-    }
+            }
 
 
     function sendForm() {
@@ -90,10 +85,9 @@ function ContactForm() {
 
     }
 
-    
+    console.log("ContactForm");
     return(
         <section id="contactForm">
-
             <div id="customAlert">
                 <div>
                     <h5>WHOPS!</h5>
@@ -102,26 +96,17 @@ function ContactForm() {
                     <button onClick={closeAlert}>take me back</button>
                 </div>
             </div>
-
             <div className="graphic"></div>
             <div className="fake-margin" >
-                
-                <h2>INTERESTED?</h2>
-                
-                
-                <form>
+                                <h2>INTERESTED?</h2>
+                                <form>
                     <input id="rName" type="text" placeholder="Name & Surname..." required maxLength="50"/>
                     <input id="rPhone" type="tel" placeholder="Telephone..." required maxLength="20" pattern="^\+?(?:[0-9] ?){6,14}[0-9]$"/>
                     <input id="rEmail" type="email" placeholder="Email..." required maxLength="100"/>
-
                     <textarea id="rMsg" rows="130" placeholder="Tell me more..." required maxLength="1000"></textarea>
-
                     <button onClick={sendForm}>send<span className="material-symbols-rounded">trending_flat</span></button> 
                 </form>
-
-
             </div>
-
         </section>
     )
 }

@@ -2,7 +2,6 @@
 
 #skill.fake-border {
     display: block;
-    
     position: relative;
     border: 2px $grey-1 solid;
     outline: $violet-2 solid 1px;
@@ -10,7 +9,6 @@
     border-radius: 40px;
     width: 100%;
     >.skill_slider {
-        
         cursor: pointer;
         position: relative;
         height: 21px;
@@ -57,10 +55,7 @@
                 background-color: $violet-1;
                 background-image: linear-gradient(to bottom right, $grey-1, $violet-1 50%)
             }
-    
         }
-
-
     }
     &.clicked {
         outline: $grey-2 solid 1px;
@@ -76,8 +71,6 @@
             >.skill_name {
                 color: $grey-1;
             }
-
-
         }
         &:hover {
             >.skill_slider {
@@ -88,9 +81,7 @@
                     background-color: $red-05;
                 }
             }
-
         }
-
     }
     &:hover {
         >.skill_slider {
