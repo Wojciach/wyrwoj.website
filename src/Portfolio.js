@@ -7,56 +7,53 @@ import pic3 from "./img/VerbMe_mockup06.gif";
 
 function Portfolio() {
 //console.log("Portfolio");
-console.log("COLOR DEPTH: " + window.screen.colorDepth);
 
     const pics = [pic1, pic2, pic3];
     const [which, setWhich] = useState(0);
 
     function followAlink() {
-       window.open(linkDesc[which].link);
+        window.open(linkDesc[which].link);
     }
 
-function next() {
-   if(which < (linkDesc.length -1)) {
-        setWhich(which + 1);
-        document.getElementById("portfolio-graphic").classList.add("animationToRight");
-        setTimeout(() => {
-            document.getElementById("portfolio-graphic").classList.remove("animationToRight");
-        }, 300);
-    }
-}
-
-function previous() {
-    if(which > 0) {
-        setWhich(which - 1);
-        document.getElementById("portfolio-graphic").classList.add("animationToLeft");
-        setTimeout(() => {
-        document.getElementById("portfolio-graphic").classList.remove("animationToLeft");
-        }, 300);
-    }
-}
-
-useEffect(
-    () => {
-        if(which < (linkDesc.length -1)) 
-        document.getElementById('bRight').classList.add("clickable");
-        else
-        document.getElementById('bRight').classList.remove("clickable");
-
-        if(which > 0) 
-        document.getElementById('bLeft').classList.add("clickable");
-        else {
-        document.getElementById('bLeft').classList.remove("clickable");
-        // document.getElementById('followLink').classList.add("clickable");
-            }
-            console.log(linkDesc[which]["link"]);
-        if(linkDesc[which]["link"] === "") {
-            document.getElementById('followLink').classList.remove("clickable");
-        } else {
-            document.getElementById('followLink').classList.add("clickable");
+    function next() {
+    if(which < (linkDesc.length -1)) {
+            setWhich(which + 1);
+            document.getElementById("portfolio-graphic").classList.add("animationToRight");
+            setTimeout(() => {
+                document.getElementById("portfolio-graphic").classList.remove("animationToRight");
+            }, 300);
         }
-        }, [which]
-)
+    }
+
+    function previous() {
+        if(which > 0) {
+            setWhich(which - 1);
+            document.getElementById("portfolio-graphic").classList.add("animationToLeft");
+            setTimeout(() => {
+            document.getElementById("portfolio-graphic").classList.remove("animationToLeft");
+            }, 300);
+        }
+    }
+
+    useEffect(
+        () => {
+            if(which < (linkDesc.length -1)) 
+            document.getElementById('bRight').classList.add("clickable");
+            else
+            document.getElementById('bRight').classList.remove("clickable");
+
+            if(which > 0) 
+            document.getElementById('bLeft').classList.add("clickable");
+            else {
+            document.getElementById('bLeft').classList.remove("clickable");
+                }
+            if(linkDesc[which]["link"] === "") {
+                document.getElementById('followLink').classList.remove("clickable");
+            } else {
+                document.getElementById('followLink').classList.add("clickable");
+            }
+            }, [which]
+    )
 
     return (
                     <section  className="fake-margin" id="portfolio">
