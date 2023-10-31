@@ -11,16 +11,17 @@ function ContactForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-        //console.log(formData);
-
-        fetch('http://localhost:80/my-react-app/public/php/sendForm.php', {
+        
+        const production = "http://localhost:80/my-react-app/public/php/sendForm.php";
+        const development = "./php/sendForm.php";
+        fetch(production, {
             mode: 'cors',
             method: 'POST',
             body: formData
         })
         .then(response => response.text())
         .then(data => {
-            //console.log(data);
+            console.log(data);
             setAlertStatust(data);
             setAlert(true);
         })
