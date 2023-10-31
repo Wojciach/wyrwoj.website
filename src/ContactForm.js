@@ -11,7 +11,7 @@ function ContactForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-        console.log(formData);
+        //console.log(formData);
 
         fetch('http://localhost:80/my-react-app/public/php/sendForm.php', {
             mode: 'cors',
@@ -20,7 +20,7 @@ function ContactForm() {
         })
         .then(response => response.text())
         .then(data => {
-            console.log(data);
+            //console.log(data);
             setAlertStatust(data);
             setAlert(true);
         })
