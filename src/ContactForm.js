@@ -1,5 +1,5 @@
 import "./contactForm.scss";
-import {useEffect, useState, memo } from "react";
+import {useState, memo } from "react";
 import CustomAlert from "./CustomAlert";
 
 function ContactForm() {
@@ -11,9 +11,9 @@ function ContactForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-        
-        const production = "http://localhost:80/my-react-app/public/php/sendForm.php";
-        const development = "./php/sendForm.php";
+
+        const development = "http://localhost:80/my-react-app/public/php/sendForm.php";
+        const production = "./php/sendForm.php";
         fetch(production, {
             mode: 'cors',
             method: 'POST',
