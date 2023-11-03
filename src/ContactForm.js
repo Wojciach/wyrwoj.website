@@ -14,7 +14,7 @@ function ContactForm() {
 
         const development = "http://localhost:80/my-react-app/public/php/sendForm.php";
         const production = "./php/sendForm.php";
-        fetch(production, {
+        fetch(development, {
             mode: 'cors',
             method: 'POST',
             body: formData

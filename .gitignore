@@ -3,6 +3,7 @@
 #*.php
 public/php/db_passProd.php
 vendor/
+passes/
 
 # dependencies
 /node_modules

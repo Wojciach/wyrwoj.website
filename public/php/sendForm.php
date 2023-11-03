@@ -28,7 +28,7 @@ if($RequestDatabase->howManyMessages() < 5) {
     $emailBody->email,
     $emailBody->message
   );
-  $email = new PHPMailerEmail($emailBody->getBody());
+  $email = new PHPMailerEmail($emailBody->getBody(), './passes/emailPass.php');
   $email->send();
   echo 'ok';
   exit();

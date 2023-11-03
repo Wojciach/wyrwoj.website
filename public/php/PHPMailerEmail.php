@@ -10,23 +10,23 @@ class PHPMailerEmail
 {
     private $mail;
     
-    public function __construct($body)
-    {
+    public function __construct($body, $passesDir)
+    {   
+        require_once($passesDir);
         $this->mail = new PHPMailer(true);
-
         //Server settings
         //$this->mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $this->mail->isSMTP();
-        $this->mail->Host       = 'smtp.hostinger.com';
+        $this->mail->Host       = $eHost;
         $this->mail->SMTPAuth   = true;
-        $this->mail->Username   = 'cv-message@wyrwoj.website';
-        $this->mail->Password   = 'Mesedz!@#800';
+        $this->mail->Username   = $eUserName;
+        $this->mail->Password   = $ePassword;
         $this->mail->SMTPSecure = 'ssl';
         $this->mail->Port       = 465;
         $this->mail->SMTPOptions = array(
             'ssl' => array(
                 //false for local dev true for production
-                'verify_peer' => true,
+                'verify_peer' => $verify_peer,
                 'verify_peer_name' => true,
                 'allow_self_signed' => true
             )
