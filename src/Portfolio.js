@@ -14,7 +14,7 @@ function Portfolio() {
     function next() {
     if(which < (linkDesc.length -1)) {
             setWhich(which + 1);
-            document.getElementById("portfolio-graphic").classList.add("animationToRight");
+                document.getElementById("portfolio-graphic").classList.add("animationToRight");
             setTimeout(() => {
                 document.getElementById("portfolio-graphic").classList.remove("animationToRight");
             }, 300);
@@ -24,9 +24,9 @@ function Portfolio() {
     function previous() {
         if(which > 0) {
             setWhich(which - 1);
-            document.getElementById("portfolio-graphic").classList.add("animationToLeft");
+                document.getElementById("portfolio-graphic").classList.add("animationToLeft");
             setTimeout(() => {
-            document.getElementById("portfolio-graphic").classList.remove("animationToLeft");
+                document.getElementById("portfolio-graphic").classList.remove("animationToLeft");
             }, 300);
         }
     }
@@ -34,15 +34,14 @@ function Portfolio() {
     useEffect(
         () => {
             if(which < (linkDesc.length -1)) 
-            document.getElementById('bRight').classList.add("clickable");
+                document.getElementById('bRight').classList.add("clickable");
             else
-            document.getElementById('bRight').classList.remove("clickable");
-
+                document.getElementById('bRight').classList.remove("clickable");
             if(which > 0) 
-            document.getElementById('bLeft').classList.add("clickable");
+                document.getElementById('bLeft').classList.add("clickable");
             else {
-            document.getElementById('bLeft').classList.remove("clickable");
-                }
+                document.getElementById('bLeft').classList.remove("clickable");
+            }
             if(linkDesc[which]["link"] === "") {
                 document.getElementById('followLink').classList.remove("clickable");
             } else {
@@ -69,6 +68,12 @@ function Portfolio() {
             <button id="followLink" onClick={followAlink}>view website
                 <span className="material-symbols-rounded">trending_flat</span>
             </button>
+            {(linkDesc[which]["gitHub"] !== "") &&
+                <div id="gitHub">
+                    <div id="git">GitHub:</div>
+                    <div id="gitAddress">{linkDesc[which]["gitHub"]}</div>
+                </div>
+            }
             <div id="portfolio-description">
                 <div>
                     <h6>Technology used:</h6>

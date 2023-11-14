@@ -33,7 +33,7 @@
         border-radius: 40px;
         padding: 6px 14px 5px 20px;
         margin-top: 7px;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         margin-right: auto;
         margin-left: auto;
         >span {
@@ -47,6 +47,50 @@
         }
         &:hover {
             background-color: $red-0;
+        }
+    }
+    >div#gitHub {
+        display: flex;
+        position: relative;
+        background-color: $violet-0;
+        box-sizing: border-box;
+        flex-direction: row;
+        align-self: center;
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        font-size: 0.7em;
+        width: auto;
+        margin: 0;
+        margin-top: 2px;
+        border-radius: 10px;
+        border: white 2px  solid;
+        outline: $violet-2 1.5px solid;
+        //border-radius: 3px;
+        >div#git {
+            padding: 3px;
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-right: 3px;
+            text-align: center;
+            display: flex;
+            position: relative;
+            background-color: $violet-1;
+            color: $grey-4;
+            width: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        >div#gitAddress {
+            padding: 3px;
+            padding-right: 10px;
+            color: $grey-3;
+            text-align: center;
+            display: flex;
+            position: relative;          
+            width: auto;
         }
     }
     >#portfolio-graphic {
@@ -98,11 +142,13 @@
         }
     }
     >#portfolio-description {
+        margin-top: 30px;
         >div {
             font-family: 'Raleway', sans-serif;
             font-size: 0.8em;
             text-align: justify;
             >h6 {
+                margin-right: 4px;
                 font-size: 0.8em;
                 font-weight: 700;
             }
