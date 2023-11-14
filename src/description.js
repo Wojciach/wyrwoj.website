@@ -6,7 +6,7 @@ var description = {
         prog: "100", 
         desc: ["JavaScript is the language I am most familiar with and I utilize it in all of my projects. I have dedicated a significant amount of my learning time to JavaScript due to its versatility and widespread use in web development.",
          
-        "Through my research and observation of common job advertisements, I have noticed that many modern companies are transitioning from using PHP to JavaScript-based environments. This led me to make the decision to go with the flow and start using Node.js in my latest project, which is the creation of this CV.", 
+        "Through my research and observation of common job advertisements, I have noticed that many modern companies are transitioning from using PHP to JavaScript-based environments. This led me to make the decision to go with the flow and start using React.js in my latest project.", 
         
         "Although my first project was a PHP-based back-end site, I am confident in my ability to adapt and work with new technologies, and I believe that my strong foundation in JavaScript will serve me well in any future projects."]
     },

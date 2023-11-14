@@ -12,25 +12,30 @@ require 'vendor/autoload.php';
 use Wojciach\Wojciach\PHPMailerEmail;
 use Wojciach\Wojciach\RequestDatabase;
 use Wojciach\Wojciach\EmailBody;
+try {
+    $RequestDatabase = new RequestDatabase("./passes/db_passProd.php");
 
-$RequestDatabase = new RequestDatabase("db_passDev.php");
+    if($RequestDatabase->howManyMessages() >= 5) {
+        echo 'tooMany';
+        exit();
+    }
 
-if($RequestDatabase->howManyMessages() >= 5) {
-  echo 'tooMany';
-  exit();
+    if($RequestDatabase->howManyMessages() < 5) {
+        $emailBody = new EmailBody();
+        $RequestDatabase->sendData(
+        $emailBody->name,
+        $emailBody->phone,
+        $emailBody->email,
+        $emailBody->message
+        );
+        $email = new PHPMailerEmail($emailBody->getBody(), './passes/emailPass.php');
+        $email->send();
+        echo 'ok';
+        exit();
+    }
+    $RequestDatabase->close();
+    
+} catch (Exception $e) {
+    echo 'error';
+    exit();
 }
-
-if($RequestDatabase->howManyMessages() < 5) {
-  $emailBody = new EmailBody();
-  $RequestDatabase->sendData(
-    $emailBody->name,
-    $emailBody->phone,
-    $emailBody->email,
-    $emailBody->message
-  );
-  $email = new PHPMailerEmail($emailBody->getBody(), './passes/emailPass.php');
-  $email->send();
-  echo 'ok';
-  exit();
-}
-$RequestDatabase->close();
