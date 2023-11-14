@@ -20,7 +20,7 @@ const linkDesc = [
     },
     {
         link: "https://recta.website/",
-        gitHub: "https://github.com/Wojciach/recta2.git",
+        gitHub: "https://github.com/Wojciach/recta.git",
         pic: pic3, 
         techUsed: "React.JS / SASS / HTML / mySql / PHP",
         desc: "I recently completed a construction company website using React, Sass, HTML, MySQL, and PHP. This project allowed me to refine my React skills, correct coding habits, and improve the integration between PHP back-end and React front-end. Focusing on OOP in PHP made the server-side more versatile for potential use in future projects. The result is a polished and scalable website, demonstrating my commitment to continuous improvement and technical excellence."
