@@ -3,7 +3,7 @@ import linkDesc from "./linksAndDescriptions.js";
 import {useState, useEffect, memo} from "react";
 import pic1 from "./img/VerbMe_mockup03.jpg";
 import pic2 from "./img/VerbMe_mockup04.jpg";
-import pic3 from "./img/VerbMe_mockup06.gif";
+import pic3 from "./img/VerbMe_mockup07.jpg";
 
 function Portfolio() {
 //console.log("Portfolio");
@@ -56,35 +56,35 @@ function Portfolio() {
     )
 
     return (
-                    <section  className="fake-margin" id="portfolio">
-                <h2>MY PORTFOLIO</h2>
-                                <div id="portfolio-graphic">
-                    <button id="bLeft" onClick={previous}>
-                        <span className="material-symbols-rounded">chevron_left</span>
-                    </button>
-                    <div id="picture">
-                        <img alt="" src={pics[which]} />
-                    </div>
-                    <button id="bRight" onClick={next}>
-                        <span className="material-symbols-rounded">chevron_right</span>
-                    </button>
+        <section  className="fake-margin" id="portfolio">
+            <h2>MY PORTFOLIO</h2>
+            <div id="portfolio-graphic">
+                <button id="bLeft" onClick={previous}>
+                    <span className="material-symbols-rounded">chevron_left</span>
+                </button>
+                <div id="picture">
+                    <img alt="" src={pics[which]} />
                 </div>
-               <div className="separator"> </div>
-                <button id="followLink" onClick={followAlink}>view website
+                <button id="bRight" onClick={next}>
+                    <span className="material-symbols-rounded">chevron_right</span>
+                </button>
+            </div>
+            <div className="separator"> </div>
+            <button id="followLink" onClick={followAlink}>view website
                 <span className="material-symbols-rounded">trending_flat</span>
             </button>
-                <div id="portfolio-description">
-                    <div>
-                        <h6>Technology used:</h6>
-                        <div>{linkDesc[which].techUsed}</div>
-                    </div>
-                    <div>
-                        <h6>What I learned:</h6>
-                        <div>{linkDesc[which].desc}</div>
-                    </div>
+            <div id="portfolio-description">
+                <div>
+                    <h6>Technology used:</h6>
+                    <div>{linkDesc[which].techUsed}</div>
                 </div>
-            </section>
-            )
+                <div>
+                    <h6>What I learned:</h6>
+                    <div>{linkDesc[which].desc}</div>
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default memo(Portfolio);

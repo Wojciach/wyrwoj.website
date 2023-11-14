@@ -2,7 +2,7 @@
 
 #*.php
 public/php/db_passProd.php
-vendor/
+php/vendor/
 passes/
 
 # dependencies

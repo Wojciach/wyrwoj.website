@@ -43,26 +43,25 @@ function Skill(props) {
    return (
     <> 
       <style>
-        {`
-                        @keyframes ${props.sName}-tail {
-              0% {transform: translateX(-100%);}
-              100% {transform: translateX(${move - wwidth - 12.5}px);}
-            }
-                      .${props.sName}-tail {
-              animation: ${props.sName}-tail 1s ease-out 0s 1 normal forwards;
-            }
-        `}
+      {`
+        @keyframes ${props.sName}-tail {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(${move - wwidth - 12.5}px);}
+        }
+            .${props.sName}-tail {
+            animation: ${props.sName}-tail 1s ease-out 0s 1 normal forwards;
+          }
+      `}
       </style>
-
-          <div id="skill" className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
-              <div className="skill_slider " >
-                  <div id={props.sName}  className={"skill "}> </div>
-                  <div className="skill_name">{description[props.sName].name}</div>
-                  <div id={props.sName + "-tail"} className="progressBar">
-                    <div className="ball"></div>
-                  </div>
-              </div>
-          </div>
+        <div id="skill" className={"fake-border " + cl} onClick={clickk} style={{order: description[props.sName].prog}}>
+            <div className="skill_slider " >
+                <div id={props.sName}  className={"skill "}> </div>
+                <div className="skill_name">{description[props.sName].name}</div>
+                <div id={props.sName + "-tail"} className="progressBar">
+                  <div className="ball"></div>
+                </div>
+            </div>
+        </div>
     </>
    )
 }

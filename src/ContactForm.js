@@ -12,9 +12,9 @@ function ContactForm() {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        const development = "http://localhost:80/my-react-app/public/php/sendForm.php";
-        const production = "./php/sendForm.php";
-        fetch(development, {
+        const developmentAddress = "http://localhost:80/my-react-app/public/php/sendForm.php";
+        const productionAddress = "./php/sendForm.php";
+        fetch(developmentAddress, {
             mode: 'cors',
             method: 'POST',
             body: formData
@@ -34,14 +34,6 @@ function ContactForm() {
 
     return(
         <section id="contactForm">
-            <div id="customAlerto" style={{display:"none"}}>
-                <div>
-                    <h5>WHOPS!</h5>
-                    <h6>SOMETHING WENT WRONG</h6>
-                    <p>Pelase use the correct format for the phone number.</p>
-                    <button onClick={()=>{}}>take me back</button>
-                </div>
-            </div>
             <div className="graphic"></div>
             <div className="fake-margin" >
                 <h2>INTERESTED?</h2>
