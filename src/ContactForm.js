@@ -12,21 +12,21 @@ function ContactForm() {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        const developmentAddress = "http://localhost:80/my-react-app/public/php/sendForm.php";
+       // const developmentAddress = "http://localhost:80/my-react-app/public/php/sendForm.php";
         const productionAddress = "./php/sendForm.php";
-        fetch(developmentAddress, {
+        fetch(productionAddress, {
             mode: 'cors',
             method: 'POST',
             body: formData
         })
         .then(response => response.text())
         .then(data => {
-            console.log(data);
+           // console.log(data);
             setAlertStatust(data);
             setAlert(true);
         })
         .catch((e) => {
-            console.log("EEEERRRRRORRRR", e);
+           // console.log("EEEERRRRRORRRR", e);
             setAlertStatust('error');
             setAlert(true);
         });

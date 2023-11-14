@@ -1,14 +1,10 @@
 import "./portfolio.scss";
 import linkDesc from "./linksAndDescriptions.js";
 import {useState, useEffect, memo} from "react";
-import pic1 from "./img/VerbMe_mockup03.jpg";
-import pic2 from "./img/VerbMe_mockup04.jpg";
-import pic3 from "./img/VerbMe_mockup07.jpg";
 
 function Portfolio() {
 //console.log("Portfolio");
 
-    const pics = [pic1, pic2, pic3];
     const [which, setWhich] = useState(0);
 
     function followAlink() {
@@ -63,7 +59,7 @@ function Portfolio() {
                     <span className="material-symbols-rounded">chevron_left</span>
                 </button>
                 <div id="picture">
-                    <img alt="" src={pics[which]} />
+                    <img alt="" src={linkDesc[which]["pic"]} />
                 </div>
                 <button id="bRight" onClick={next}>
                     <span className="material-symbols-rounded">chevron_right</span>
