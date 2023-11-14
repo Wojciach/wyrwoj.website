@@ -8,12 +8,8 @@ function Header() {
   }
   
   return (
-    <>
-      <header>
-          
-          
-          
-          <section>
+          <header>
+                    <section>
           <div id="graph"></div>
               <div className="fake-margin">
                 <div id="nameTitle">
@@ -29,11 +25,8 @@ function Header() {
                 </button>
             </div>
           </section>
-          
-      </header>
-    </>  
-  );
-
+                </header>
+      );
 }
 
 export default Header;

@@ -8,8 +8,7 @@
     justify-content: flex-end;
     align-content: center;
     margin-bottom: 50px;
-    //flex-wrap: wrap;
-    >#followLink {
+        >#followLink {
         pointer-events: none;
         background-color: $red-0;
         color: $grey-2;
@@ -19,7 +18,6 @@
             color: $violet-3;
         }
     }
-    
     button {
         position: relative;
         display: flex;
@@ -38,7 +36,6 @@
         margin-bottom: 30px;
         margin-right: auto;
         margin-left: auto;
-
         >span {
             display: flex;
             text-align: center;
@@ -50,14 +47,12 @@
         }
         &:hover {
             background-color: $red-0;
-            
         }
     }
     >#portfolio-graphic {
         position: relative;
         display: flex;
         flex-direction: row;
-        
         justify-content: center;
         align-items: center;
         #picture {
@@ -67,11 +62,9 @@
             margin-left: auto;
             margin-right: auto;
             width: 400px;
-           // height: 300px;
             background-size:contain;
             background-repeat: no-repeat;
             background-position: center;
-          //  background-image: url("./img/CVMe_website-01.png");
             img {
                 margin-left: auto;
                 margin-right: auto;
@@ -89,10 +82,6 @@
             border: 2px solid $grey-1;
             color: $grey-1;
             margin: 0;
-            @media screen and (max-width: 500px) {
-              //  margin: -15px;
-                
-            }
             >span {
                 padding: 0;
             }
@@ -106,13 +95,9 @@
                     color: $red;
                 }
             }
-            &.clickable:hover {
-
-            }
         }
     }
     >#portfolio-description {
-        
         >div {
             font-family: 'Raleway', sans-serif;
             font-size: 0.8em;
@@ -120,52 +105,40 @@
             >h6 {
                 font-size: 0.8em;
                 font-weight: 700;
-                
             }
             >div {
                 font-weight: 400;
-                
-                
             }
             >* {
-                
                 display: inline;
             }
         }
         >div:first-child {
             >div {
                 color: $red;
-                
             }
         }
     }
-    
 }
-
 .animationToRight {
     animation-name: aniR;
     animation-duration: 0.3s;
-  //  animation-direction:normal;
-    animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
 }
-
 @keyframes aniR {
     0% {
         transform: translateX(0);
         opacity: 1;
     }
-
     49% {
         transform: translateX(800px);
         opacity: 0;
 
     }
-
     51% {
         transform: translateX(-800px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -175,8 +148,7 @@
 .animationToLeft {
     animation-name: aniL;
     animation-duration: 0.3s;
-  //  animation-direction:normal;
-    animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
 }
 
 @keyframes aniL {
@@ -184,18 +156,14 @@
         transform: translateX(0);
         opacity: 1;
     }
-
     49% {
         transform: translateX(-800px);
         opacity: 0;
-
     }
-
     51% {
         transform: translateX(800px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0);
         opacity: 1;
