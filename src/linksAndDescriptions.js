@@ -26,19 +26,20 @@ const linkDesc = [
         desc: "I recently completed a construction company website using React, Sass, HTML, MySQL, and PHP. This project allowed me to refine my React skills, correct coding habits, and improve the integration between PHP back-end and React front-end. Focusing on OOP in PHP made the server-side more versatile for potential use in future projects. The result is a polished and scalable website, demonstrating my commitment to continuous improvement and technical excellence."
     },
     {
-        link: "",
-        gitHub: "",
+        link: "https://owl.wyrwoj.website/",
+        gitHub: "https://github.com/Wojciach/PhotoGallery.git",
         pic: pic0, 
-        techUsed: "JavaScript / SASS / HTML / mySql / PHP / JQuery",
-        desc: "Currently developing a system for efficient gym membership management. Using PHP, JavaScript, mySql, Sass, and jQuery, the project includes QR code generation and scanning, user/coach interfaces, and emphasizes modular JavaScript for scalability. Refreshing jQuery skills, focusing on PHP OOP for a structured server-side. Streamlining processes for a seamless user experience."
+        techUsed: "JavaScript / SASS / HTML / mySql / PHP",
+        desc: "I have created a simple website to showcase a sample of my photo and video portfolio. The pictures and videos were created for the leather carving studio Bulfinch Workshop."
     },
     {
         link: "",
         gitHub: "",
         pic: pic0, 
         techUsed: "JavaScript / SASS / HTML / mySql / PHP / JQuery",
-        desc: "I am also creating a website to showcase my extensive product photography portfolio alongside highlighting my eb development and coding skills. Leveraging my photography background for enhanced design, color engineering, UX, and UI considerations. This project reflects the synergy of my artistic and technical abilities."
+        desc: "Currently developing a system for efficient gym membership management. Using PHP, JavaScript, mySql, Sass, and jQuery, the project includes QR code generation and scanning, user/coach interfaces, and emphasizes modular JavaScript for scalability. Refreshing jQuery skills, focusing on PHP OOP for a structured server-side. Streamlining processes for a seamless user experience."
     }
+
 ]
 
 export default linkDesc;
